@@ -1,6 +1,6 @@
 ---
 import { type Product } from "../interfaces/product";
-import { PHONE } from "../consts/siteInfo";
+import { PHONE_HREF_LINK } from "../consts/siteInfo";
 
 interface Props {
   product: Product;
@@ -36,8 +36,7 @@ const { product } = Astro.props;
       <a
         rel="nofollow"
         target="_blank"
-        href={"tel:" +
-          PHONE.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "")}
+        href={PHONE_HREF_LINK}
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Sipariş ver</a
       >
