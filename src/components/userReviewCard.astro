@@ -14,7 +14,7 @@ const {review} = Astro.props
         <span class="flex justify-center shrink-0 items-center !h-10 !w-10  mr-2 bg-yellow-300 rounded-full font-bold" >
             {review.author_title?.slice(0,1).toLocaleUpperCase()}
         </span>
-        <div class="flex flex-col items-start" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Restaurant">
+        <div class="flex flex-col items-start">
             <a class="font-semibold my-2" href={review.author_link} rel="ugc" target="_blank" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" class="capitalize">{review.author_title.toLocaleLowerCase()}</span></a>
             <div class="flex items-center font-semibold my-2 text-yellow-300" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
                 <span itemprop="ratingValue">{review.review_rating}</span>/5
