@@ -1,0 +1,130 @@
+---
+
+import { type Product } from "../interfaces/product";
+import ProductCard from '../components/productCard.astro';
+const products: Product[] = [
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+  {
+    title: "Çiğ Köfte 200 Gr.",
+    price: 200,
+    link: "",
+    image: {
+      alt: "200 Gr Çiğköfte",
+      title: "200 Gr Çiğköfte",
+      src: "https://www.adiyorem.com.tr/kullanici/icerik/urun_resimleri/200gr-7b618.jpg",
+    },
+  },
+];
+---
+
+<section id="urunler">
+  <div
+    class="px-4 mx-auto text-center md:max-w-screen-md xl:max-w-screen-xl lg:px-36"
+  >
+    <span class="font-semibold text-2xl uppercase">Öne Çıkan Ürünler</span>
+    <div
+      class="grid h-full lg:grid-cols-3 md:grid-cols-2 gap-3 mx-auto mt-8 text-gray-500"
+    >
+      {products.map((x) => <ProductCard product={x} />)}
+    </div>
+  </div>
+</section>

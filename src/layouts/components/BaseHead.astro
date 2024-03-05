@@ -1,0 +1,69 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import { SITE_TITLE, SITE_URL } from "../../consts/siteInfo";
+
+const schemas = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  image: [SITE_TITLE + "/isletme.jpg"],
+  name: "Gümüşhane Adıyörem Çiğköfte",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Karaer, Atatürk Cd. No:26",
+    addressLocality: "Gümüşhane",
+    addressRegion: "TR Gümüşhane",
+    postalCode: "29000",
+    addressCountry: "TR",
+  },
+  review: {
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "4.9",
+      bestRating: "5",
+    },
+    author: {
+      "@type": "Person",
+      name: "Okan Tüfekçi",
+    },
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.458986,
+    longitude: 39.4796843,
+  },
+  url: SITE_URL + "/iletisim",
+  telephone: "+904562136133",
+  servesCuisine: "Turkish",
+  priceRange: "$",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "10:00",
+      closes: "03:00",
+    },
+  ],
+  menu: SITE_URL+"/menu",
+  acceptsReservations: "True",
+});
+---
+
+<!-- Global Metadata -->
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{SITE_TITLE}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <script type="application/ld+json" is:inline set:html={schemas} />
+</head>
