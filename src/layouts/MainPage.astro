@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./components/HeaderLink.astro";
-import { SITE_TITLE, PHONE, BUSSINES_LINK } from "../consts/siteInfo";
+import { SITE_TITLE, PHONE, PHONE_HREF_LINK, BUSSINES_LINK } from "../consts/siteInfo";
 const { pathname } = Astro.url;
 ---
 
@@ -27,8 +27,7 @@ const { pathname } = Astro.url;
            -->
 
           <a
-            href={"tel:" +
-              PHONE.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "")}
+            href={PHONE_HREF_LINK}
             class="mx-4 hover:scale-125 duration-300"
           >
             <img
@@ -95,6 +94,10 @@ const { pathname } = Astro.url;
           <li>
             <a
               href="#urunler"
+              data-collapse-toggle="mobile-menu-2"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+              role="presentation"
               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >Ürünler</a
             >
@@ -102,13 +105,21 @@ const { pathname } = Astro.url;
           <li>
             <a
               href="#yorumlar"
+              data-collapse-toggle="mobile-menu-2"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+              role="presentation"
               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >Yorumlar</a
             >
           </li>
           <li>
             <a
+            data-collapse-toggle="mobile-menu-2"
               href="#iletisim"
+              role="button"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >İletişim</a
             >
@@ -118,7 +129,7 @@ const { pathname } = Astro.url;
     </div>
   </nav>
 </header>
-<main class="py-4 mb-16">
+<main class="py-4 mb-30">
   <slot />
 </main>
 <footer>
@@ -171,8 +182,7 @@ const { pathname } = Astro.url;
       <a
         role="button"
         type="button"
-        href={"tel:" +
-          PHONE.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "")}
+        href={PHONE_HREF_LINK}
         class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
       >
         <img
