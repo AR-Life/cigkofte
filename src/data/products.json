@@ -1,0 +1,74 @@
+[
+    {
+        "image": "",
+        "title": "",
+        "descripton": "",
+        "price": ""
+    },
+    {
+        "image": "",
+        "title": "Dürüm ",
+        "descripton": "100 gram",
+        "price": "48"
+    },
+    {
+        "image": "",
+        "title": "Doritoslu Dürüm",
+        "descripton": "100 gram",
+        "price": "58"
+    },
+    {
+        "image": "",
+        "title": "Duble Dürüm",
+        "descripton": "175 gram",
+        "price": "74"
+    },
+    {
+        "image": "",
+        "title": "Duble Doritoslu Dürüm",
+        "descripton": "175 gram",
+        "price": "84"
+    },
+    {
+        "image": "",
+        "title": "",
+        "descripton": "",
+        "price": ""
+    },
+    {
+        "image": "",
+        "title": "200 Gram ",
+        "descripton": "Minik Porsiyon",
+        "price": "77"
+    },
+    {
+        "image": "",
+        "title": "400 Gram",
+        "descripton": "Tek Kişilik Porsiyon",
+        "price": "140"
+    },
+    {
+        "image": "",
+        "title": "500 Gram",
+        "descripton": "İki Kişilik Porsiyon",
+        "price": "165"
+    },
+    {
+        "image": "",
+        "title": "600 Gram",
+        "descripton": "Orta Boy Porsiyon",
+        "price": "190"
+    },
+    {
+        "image": "",
+        "title": "800 Gram",
+        "descripton": "Büyük Boy Porsiyon",
+        "price": "240"
+    },
+    {
+        "image": "",
+        "title": "1000 Gram",
+        "descripton": "Aile Boyu Porsiyon",
+        "price": "280"
+    }
+]
