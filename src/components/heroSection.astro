@@ -1,39 +1,21 @@
 ---
+import { BUSSINES_LINK, PHONE, PHONE_HREF_LINK } from "../consts/siteInfo";
 import { WORK_TIME } from "../consts/siteInfo";
-import { BUSSINES_LINK, PHONE } from "../consts/siteInfo";
-
-
-
-const date = new Date(new Date(Date.now()).getTime() + ((new Date(Date.now()).getTimezoneOffset()+180)*60000))
-
-const time = {
-  hour: date.getHours().toString().padStart(2, "0"),
-  minute: date.getMinutes().toString().padStart(2, "0"),
-  day: date.toLocaleString("tr-TR", { weekday: "long" }),
-};
-const isWork = (): boolean => {
-  const nowHour = parseInt(time.hour);
-  return  (
-    (nowHour >= WORK_TIME.openHour && nowHour <= 24) ||
-    (nowHour >= 0 && nowHour <= WORK_TIME.closeHour) ||
-    (nowHour >= WORK_TIME.openHour && nowHour <= WORK_TIME.closeHour)
-  );
-};
 ---
 
-<section class="dark:bg-gray-900 min-h-screen">
+<section class="dark:bg-gray-900 h-screen sm:h-auto">
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-    <span
+    <span id="workTime"
       class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       role="alert"
     >
       <span
-        class:list={['text-xs rounded-full text-white px-4 py-1.5 mr-3', {'bg-green-600':isWork()}, {'bg-red-600':!isWork()}]}
+        class:list={['text-xs rounded-full text-white px-4 py-1.5 mr-3']}
       >
-        {() => {return isWork() ? "Şuanda açık" : "Şuan kapalı" }}</span
+       </span
       >
-      <span class="text-sm font-medium">
-        {time.day} {`${time.hour}:${time.minute}`}</span
+      <span class="text-sm font-medium" >
+       </span
       >
     </span>
     <h1
@@ -52,8 +34,7 @@ const isWork = (): boolean => {
       <a
         rel="nofollow"
         target="_blank"
-        href={"tel:" +
-          PHONE.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "")}
+        href={PHONE_HREF_LINK}
         class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
       >
         <img
@@ -92,3 +73,32 @@ const isWork = (): boolean => {
     </div>
   </div>
 </section>
+<script is:inline define:vars={WORK_TIME}>
+ 
+  const date = new Date(new Date(Date.now()).getTime() + ((new Date(Date.now()).getTimezoneOffset()+180)*60000))
+
+const time = {
+  hour: date.getHours().toString().padStart(2, "0"),
+  minute: date.getMinutes().toString().padStart(2, "0"),
+  day: date.toLocaleString("tr-TR", { weekday: "long" }),
+};
+const isWork = () => {
+  const nowHour = parseInt(time.hour);
+  return  (
+    (nowHour >= openHour && nowHour <= 24) ||
+    (nowHour >= 0 && nowHour <= closeHour) ||
+    (nowHour >= openHour && nowHour <= closeHour)
+  );
+};
+
+const workTimeElement = document.getElementById("workTime");
+
+if(isWork()){
+  workTimeElement.children[0].setAttribute("style","background-color:#057a55");
+  workTimeElement.children[0].innerHTML = "Şuanda açık";
+}else{
+  workTimeElement.children[0].setAttribute("style","background-color:#e02424");
+  workTimeElement.children[0].innerHTML = "Şuanda kapalı";
+}
+workTimeElement.children[1].innerHTML =  `${time.day} ${time.hour}:${time.minute}`;
+</script>
