@@ -3,10 +3,10 @@
 // all pages through the use of the <BaseHead /> component.
 import { SITE_TITLE, SITE_URL } from "../../consts/siteInfo";
 
-const schemas = JSON.stringify({
+const schemas = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  image: [SITE_TITLE + "/isletme.jpg"],
+  image: [SITE_URL + "/isletme.jpg"],
   name: "Gümüşhane Adıyörem Çiğköfte",
   address: {
     "@type": "PostalAddress",
@@ -55,7 +55,8 @@ const schemas = JSON.stringify({
   ],
   menu: SITE_URL + "/menu",
   acceptsReservations: "True",
-});
+};
+const json_schemas = JSON.stringify(schemas);
 ---
 
 <!-- Global Metadata -->
@@ -89,5 +90,5 @@ const schemas = JSON.stringify({
   <meta name="theme-color" content="#ffffff" />
   <meta name="description" content="Gümüşhanenin en lezzetli çiğ köftesi Adıyörem Çiğ Köfte! İndirim günleri hakkında detaylı bilgiler için ziyaret edin!">
 
-  <script type="application/ld+json" is:inline set:html={schemas} />
+  <script type="application/ld+json" is:inline set:html={json_schemas} />
 </head>
