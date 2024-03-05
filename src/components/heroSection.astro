@@ -2,12 +2,14 @@
 import { WORK_TIME } from "../consts/siteInfo";
 import { BUSSINES_LINK, PHONE } from "../consts/siteInfo";
 
-const date = new Date();
+
+
+const date = new Date(new Date(Date.now()).getTime() + ((new Date(Date.now()).getTimezoneOffset()+360)*60000))
 
 const time = {
-  hour: date.getUTCHours().toString().padStart(2, "0"),
-  minute: date.getUTCMinutes().toString().padStart(2, "0"),
-  day: date.toLocaleString("tr-TR", { weekday: "long", timeZone: "UTC" }),
+  hour: date.getHours().toString().padStart(2, "0"),
+  minute: date.getMinutes().toString().padStart(2, "0"),
+  day: date.toLocaleString("tr-TR", { weekday: "long" }),
 };
 const isWork = (): boolean => {
   const nowHour = parseInt(time.hour);
