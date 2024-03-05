@@ -1,23 +1,28 @@
 ---
-import {MAP_LOCALATION} from '../consts/siteInfo'
+import {MAP_LOCALATION, PHONE, PHONE_HREF_LINK, ADDRESS} from '../consts/siteInfo'
 ---
 <section class="px-4 mt-4 mx-auto text-center md:max-w-screen-md xl:max-w-screen-xl lg:px-36" id="iletisim" >
-    <h2 class="w-full font-semibold text-2xl text-gray-400 uppercase my-4">Bize Ulaşın</h2>
+    <h2 class="w-full font-semibold text-2xl text-gray-400 uppercase my-4 py-10">Bize Ulaşın</h2>
 
     <div class="grid sm:grid-cols-2 sm:gap-1">
   <iframe src={MAP_LOCALATION} class="w-full h-full min-h-64" title="Google Haritalarda Adıyörem Çiğköfte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
             <div class="sm:grid sm:grid-cols-2">
-                {Array.from({length:3}).map(() => 
                 
-                <a class="flex items-center p-2"  href="#">
-                    <img class="" src="/whatsapp.svg" width="48" height="48" title="Whatsapp" alt="Whatsapp ile iletişim" > 
+                <a class="flex items-center p-2"  href={PHONE_HREF_LINK}>
+                    <img  src="/phone.svg" width="48" height="48" title="Telefon" alt="Telefon ile iletişim" > 
                     <span class="flex flex-col ml-2">
-                        <b>Whatsapp</b>
-                        <span>+90 530 770 24 35</span>
+                        <b>Telefon</b>
+                        <span>{PHONE}</span>
                     </span>
                 </a>
-                )}
+                <a class="flex items-center p-2"  href={PHONE_HREF_LINK}>
+                    <img  src="/map-icon.svg" width="48" height="48" title="Adres" alt="Adres tarifi" > 
+                    <span class="flex flex-col ml-2">
+                        <b>Adres</b>
+                        <span>{ADDRESS}</span>
+                    </span>
+                </a>
             </div>
         </div>
     </div>
