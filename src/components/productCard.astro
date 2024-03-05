@@ -6,20 +6,24 @@ interface Props {
   product: Product;
 }
 const { product } = Astro.props;
+
+const getRandomImage = () => {
+
+}
 ---
 
 <div
-  class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="w-full flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
   itemscope
   itemtype="http://schema.org/Food"
 >
   <img
     loading="lazy"
-    class="rounded-t-lg"
+    class="rounded-t-lg aspect-auto object-cover max-h-68 h-full"
     itemprop="image"
-    src={product.image.src}
-    alt={product.image.alt}
-    title={product.image.title}
+    src={product.image as string}
+    alt={product.title + ' Ürün Fotoğrafı'}
+    title={product.title}
   />
   <div class="px-5 pb-5">
     <h3 itemprop="name"

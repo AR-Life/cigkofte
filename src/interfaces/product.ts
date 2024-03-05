@@ -1,10 +1,9 @@
 import {type Image} from "./image";
 
 export interface Product{
-    image:Image,
-    link:string,
+    image: Image | string ,
     title:string,
     description?:string,
-    price:number,
+    price:string,
     
 }
