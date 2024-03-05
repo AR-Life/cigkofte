@@ -1,23 +1,11 @@
 ---
 import UserReviewCard from '../components/userReviewCard.astro';
-import type { Review } from "../interfaces/review";
-const reviews : Review[]=[
-	{fullName:"Ahmet YILDIZ",
-comment: "Bu harika çiğ köfteyi yemenizi şiddetle tavsiye ederim.",
-star:4,
-image:{
-src:"/whatsapp.svg",
-alt:"User Profile Image",
-title:"User Profile Image",	
-}
-}
-] 
+import reviews from '../data/reviews.json'; 
 
 ---
 	  <section class="px-4 mt-4 mx-auto text-center md:max-w-screen-md xl:max-w-screen-xl lg:px-36"  id="yorumlar" >
-		<h2 class="font-semibold text-2xl uppercase">Değerli Yorumlarınız</h2>
+		<h2 class="font-semibold text-2xl uppercase py-10">Değerli Yorumlarınız</h2>
 		<div class="">
-			{Array.from({length:10}).map(() => <UserReviewCard review={reviews[0]}></UserReviewCard> )}
-			{reviews.map((review) =>  <UserReviewCard review={review}></UserReviewCard>)}
+			{reviews.sort((a,b) => b.review_text.length - a.review_text.length).map((review) => <UserReviewCard review={review}></UserReviewCard> )}
 		</div>
 	  </section>
