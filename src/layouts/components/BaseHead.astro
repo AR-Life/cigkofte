@@ -2,6 +2,8 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import { SITE_TITLE, SITE_URL } from "../../consts/siteInfo";
+import reviews from '../../data/reviews.json'
+import type { Review } from "../../interfaces/review";
 
 const schemas = {
   "@context": "https://schema.org",
@@ -16,18 +18,7 @@ const schemas = {
     postalCode: "29000",
     addressCountry: "TR",
   },
-  review: {
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "4.9",
-      bestRating: "5",
-    },
-    author: {
-      "@type": "Person",
-      name: "Okan Tüfekçi",
-    },
-  },
+  review: [],
   geo: {
     "@type": "GeoCoordinates",
     latitude: 40.458986,
@@ -56,6 +47,13 @@ const schemas = {
   menu: SITE_URL + "/menu",
   acceptsReservations: "True",
 };
+
+reviews.map((x:Review) => {
+  const review= {
+    "@context": "https://schema.org/",
+    "@type": "Review"
+  }
+})
 const json_schemas = JSON.stringify(schemas);
 ---
 
