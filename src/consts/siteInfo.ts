@@ -1,6 +1,6 @@
-export const SITE_TITLE = "Gümüşhane Adıyörem Çiğköfte"
 export const SITE_URL = "cigkofte.vercel.app"
 export const PHONE = "+90 (456) 213 61 33"
+export const SITE_TITLE = "Gümüşhane Adıyörem Çiğköfte " + PHONE;
 export const PHONE_HREF_LINK = "tel:" + PHONE.replaceAll(" ", "").replaceAll("(", "").replaceAll(")", "");
 export const ADDRESS = "Karaer Mahallesi, Atatürk Cd. No:26 Merkez/Gümüşhane"; 
 export const WHATSAPP = ""
