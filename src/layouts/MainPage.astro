@@ -28,21 +28,23 @@ const { pathname } = Astro.url;
 
           <a
             href={PHONE_HREF_LINK}
-            class="mx-4 hover:scale-125 duration-300"
+            class="flex items-center mx-4 hover:scale-125 duration-300"
           >
             <img
               src="/phone.svg"
               title="Telefon Et"
               alt="Telefon ile iletişim"
+              class="mr-2"
               width="36"
               height="36"
             />
+            {PHONE}
           </a>
           <a
             href={BUSSINES_LINK}
             target="_blank"
             rel="nofollow"
-            class="mx-4 hover:scale-125 duration-300"
+            class="mx-4 flex items-center hover:scale-125 duration-300"
           >
             <img
               src="/map-icon.svg"
@@ -50,7 +52,9 @@ const { pathname } = Astro.url;
               alt="Yol tarifi al"
               width="48"
               height="48"
+              class="mr-2"
             />
+            Yol Tarifi Al
           </a>
         </div>
         <button
