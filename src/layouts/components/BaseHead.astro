@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import { SITE_TITLE, SITE_URL } from "../../consts/siteInfo";
+import {SITE_TITLE, SITE_URL, PHONE} from "../../consts/siteInfo";
 import reviews from '../../data/reviews.json'
 import type { Review } from "../../interfaces/review";
 
@@ -60,7 +60,7 @@ const json_schemas = JSON.stringify(schemas);
 <!-- Global Metadata -->
 <head>
   <meta charset="utf-8" />
-  <title>{SITE_TITLE}</title>
+  <title>{SITE_TITLE} { PHONE }</title>
   <meta name="google-site-verification" content="Eaxm-InYffzuDFus8uzFE9Qkk9nGpDwg6jygvV8ylO4" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
