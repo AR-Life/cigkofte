@@ -1,63 +1,109 @@
 [
-
     {
         "image": "/cig-kofte-durum.webp",
         "title": "Çiğ Köfte 100 Gr Dürüm ",
         "description": "100 gram",
-        "price": "48"
+        "price": "70"
+    },
+    {
+        "_comment": "Gramaj sorulacak",
+        "image": "/cig-kofte-durum.webp",
+        "title": "Duble Çiğ Köfte Dürüm",
+        "description": "175 gram",
+        "price": "110"
+    },
+    {
+        "_comment": "Gramaj sorulacak",
+        "image": "/cig-kofte-durum.webp",
+        "title": "Zurna Çiğ Köfte Dürüm",
+        "description": "175 gram",
+        "price": "130"
+    },
+    {
+        "_comment": "Gramaj sorulacak",
+        "image": "/cig-kofte-durum.webp",
+        "title": "Sushi Çiğ Köfte Dürüm",
+        "description": "175 gram",
+        "price": "150"
+    },
+    {
+        "_comment": "Gramaj sorulacak",
+        "image": "/cig-kofte-durum.webp",
+        "title": "Bazuka Çiğ Köfte Dürüm",
+        "description": "175 gram",
+        "price": "170"
     },
     {
         "image": "/cig-kofte-durum.webp",
         "title": "Doritoslu Çiğ Köfte Dürüm",
         "description": "100 gram",
-        "price": "58"
+        "price": "80"
     },
-    {
-        "image": "/cig-kofte-durum.webp",
-        "title": "Duble Çiğ Köfte Dürüm",
-        "description": "175 gram",
-        "price": "74"
-    },
+
     {
         "image": "/cig-kofte-durum.webp",
         "title": "Duble Doritoslu Çiğ Köfte Dürüm",
         "description": "175 gram",
-        "price": "84"
+        "price": "120"
     },
     {
         "image": "/cig-kofte-servis.webp",
         "title": "200 Gr Çiğ Köfte ",
         "description": "Minik Porsiyon",
-        "price": "77"
+        "price": "150"
     },
     {
         "image": "/cig-kofte-tabak-servis.webp",
         "title": "400 Gr Çiğ Köfte",
         "description": "Tek Kişilik Porsiyon",
-        "price": "140"
+        "price": "210"
     },
     {
         "image": "/cig-kofte-servis.webp",
         "title": "500 Gr Çiğ Köfte",
         "description": "İki Kişilik Porsiyon",
-        "price": "165"
+        "price": "250"
     },
     {
         "image": "/cig-kofte-tabak-servis.webp",
         "title": "600 Gr Çiğ Köfte",
         "description": "Orta Boy Porsiyon",
-        "price": "190"
+        "price": "290"
     },
     {
         "image": "/cig-kofte-servis.webp",
         "title": "800 Gr Çiğ Köfte",
         "description": "Büyük Boy Porsiyon",
-        "price": "240"
+        "price": "360"
     },
     {
         "image": "/cig-kofte-tabak-servis.webp",
         "title": "1000 Gr Çiğ Köfte",
         "description": "Aile Boyu Porsiyon",
-        "price": "280"
+        "price": "420"
+    },
+    {
+        "image": "/nohutlu-tavuk-pilav.webp",
+        "title": "Nohutlu Tavuk Pilav",
+        "description": "Bir Porsiyon",
+        "price": "130"
+    },
+    {
+        "image": "/nohutlu-tavuk-pilav.webp",
+        "title": "Nohutlu Pilav",
+        "description": "Bir Porsiyon",
+        "price": "100"
+    },
+    {
+        "image": "/midye.webp",
+        "title": "Midye",
+        "description": "10 Adet",
+        "price": "130"
+    },
+    {
+        "image": "/midye.webp",
+        "title": "Midye",
+        "description": "50 Adet",
+        "price": "600"
     }
 ]
