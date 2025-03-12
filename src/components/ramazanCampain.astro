@@ -9,7 +9,7 @@ import {PHONE_HREF_LINK} from "../consts/siteInfo";
         const hideDate = new Date(now.getFullYear(), 3, 2); // Nisan 2
 
         if (now >= hideDate) {
-            document.getElementById("ramazan").remove();
+            document.getElementById("ramazan")?.remove();
         } else {
             const heroSection = document.getElementById("ramazan");
             if (heroSection) {
