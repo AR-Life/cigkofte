@@ -1,0 +1,22 @@
+---
+import {PHONE_HREF_LINK} from "../consts/siteInfo";
+---
+<a href={PHONE_HREF_LINK} id="ramazan" class="flex w-screen lg:w-1/2 mx-auto min-h-[400px] mb-8 lg:min-h-[670px]">
+</a>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const now = new Date();
+        const hideDate = new Date(now.getFullYear(), 3, 2); // Nisan 2
+
+        if (now >= hideDate) {
+            document.getElementById("ramazan").remove();
+        } else {
+            const heroSection = document.getElementById("ramazan");
+            if (heroSection) {
+                heroSection.style.backgroundImage = `url(${window.location.origin}/ramazan-kampanya.webp)`;
+                heroSection.style.backgroundSize = "100% 100%";
+                heroSection.style.backgroundPosition = "center";
+            }
+        }
+    });
+</script>
